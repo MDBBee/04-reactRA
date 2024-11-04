@@ -19,6 +19,11 @@ const App = () => {
     });
   };
 
+  const randomSelection = () => {
+    const ran = Math.floor(Math.random() * reviews.length);
+    setIndex(ran);
+  };
+
   return (
     <main>
       <article className="review">
@@ -39,6 +44,9 @@ const App = () => {
             <FaChevronRight />
           </button>
         </div>
+        <button className="btn btn-hipster" onClick={randomSelection}>
+          Surprise me
+        </button>
       </article>
     </main>
   );
